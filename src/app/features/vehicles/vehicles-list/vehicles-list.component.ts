@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { VehicleService } from '../../../core/services/vehicle.service';
 
 @Component({
     selector: 'app-vehicles-list',
@@ -6,4 +7,13 @@ import { Component } from '@angular/core';
     imports: [],
     templateUrl: './vehicles-list.component.html',
 })
-export default class VehiclesListComponent {}
+export default class VehiclesListComponent {
+    vehicles: any[] = [];
+    vehicleService = inject(VehicleService);
+
+    ngOnInit() {
+        this.vehicleService.getVehicles().subscribe((vehicles) => {
+            console.log(vehicles);
+        });
+    }
+}
