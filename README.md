@@ -117,3 +117,11 @@ export const environment = {
 -   **Modal de confirmación de baja**: Confirmación para dar de baja un vehículo.
 -   **Validaciones**: Las validaciones se realizan en tiempo real y al enviar el formulario.
 -   **Interacción con backend**: La aplicación se comunica con el backend para obtener y enviar el formulario
+
+## Ubicación del BackEnd
+
+El backend de la aplicación se encuentra en la siguiente ubicación:
+
+-   **BackEnd**: [Vehicle-Api](https://github.com/CristinaOsorio/vehicle-api)
+
+Asegúrate de que el backend esté ejecutándose en `http://localhost:3000` (o el puerto que hayas configurado) para poder interactuar con el frontend correctamente.
