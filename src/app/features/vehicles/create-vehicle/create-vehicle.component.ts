@@ -1,24 +1,24 @@
 import { Component, inject } from '@angular/core';
 import {
-    FormBuilder,
     FormGroup,
-    ReactiveFormsModule,
+    FormBuilder,
     Validators,
+    ReactiveFormsModule,
 } from '@angular/forms';
-import { VehicleStatus } from '../../../core/enums/vehicle-status.enum';
-import { CommonModule } from '@angular/common';
-import { VehicleService } from '../../../core/services/vehicle.service';
 import { Router, RouterModule } from '@angular/router';
-import { setBackendValidationErrors } from '../../../core/handles/set-backend-validations-errors.handle';
+import { CommonModule } from '@angular/common';
 import { statusValidator } from '../../../core/custom-validators/status.validators';
+import { VehicleStatus } from '../../../core/enums/vehicle-status.enum';
+import { setBackendValidationErrors } from '../../../core/handles/set-backend-validations-errors.handle';
+import { VehicleService } from '../../../core/services/vehicle.service';
 
 @Component({
-    selector: 'app-form',
+    selector: 'app-create-vehicle',
     standalone: true,
     imports: [CommonModule, ReactiveFormsModule, RouterModule],
-    templateUrl: './form.component.html',
+    templateUrl: './create-vehicle.component.html',
 })
-export default class FormComponent {
+export default class CreateVehicleComponent {
     vehicleForm!: FormGroup;
     vehicleStatus = VehicleStatus;
 

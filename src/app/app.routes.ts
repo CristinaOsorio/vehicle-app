@@ -14,7 +14,9 @@ export const routes: Routes = [
             {
                 path: 'create',
                 loadComponent: () =>
-                    import('./features/vehicles/form/form.component'),
+                    import(
+                        './features/vehicles/create-vehicle/create-vehicle.component'
+                    ),
             },
             {
                 path: '**',
