@@ -16,8 +16,13 @@ export default class VehiclesListComponent {
     vehicleStatus = VehicleStatus;
 
     ngOnInit() {
-        this.vehicleService.getVehicles().subscribe((vehicles) => {
-            this.vehicles = vehicles;
+        this.vehicleService.getVehicles().subscribe({
+            next: (res) => {
+                this.vehicles = res.data;
+            },
+            error: (err) => {
+                console.error('Error fetching vehicles:', err);
+            },
         });
     }
 }
