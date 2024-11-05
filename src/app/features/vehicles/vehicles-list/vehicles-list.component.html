@@ -43,6 +43,7 @@
                             </div>
                         </td>
                         <td class="px-6 py-4">
+                            @if (vehicle.status == vehicleStatus.Active) {
                             <button
                                 type="button"
                                 (click)="openEditModal(vehicle)"
@@ -56,6 +57,7 @@
                             >
                                 Dar de Baja
                             </button>
+                            }
                         </td>
                     </tr>
                     } @empty {
